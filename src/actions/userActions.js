@@ -1,8 +1,8 @@
 import * as types from './actionTypes';
 
-export const getUserAction = () => {
-    console.log('action');
+export const updateAccessTokenAction = (token) => {
     return {
-        type: types.GET_USER
-    }
+        type: types.UPDATE_ACCESS_TOKEN,
+        token
+    };
 };

@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import userReducer from "./userReducer";
-import pageReducer from "./pageReducer";
+import playlistReducer from "./playlistReducer";
+import tracksReducer from "./tracksReducer";
+import userReducer from './userReducer';
 
-const rootReducer = combineReducers({ user: userReducer, page: pageReducer });
-
+const rootReducer = combineReducers({ user: userReducer, playlists: playlistReducer, tracks: tracksReducer });
 
 export default rootReducer;

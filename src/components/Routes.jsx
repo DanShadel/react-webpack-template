@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from "react-router";
 import Authorize from './Authorize.jsx';
 import Playlists from './Playlists.jsx';
+import Analysis from './Analysis.jsx';
 
 export const Routes = () => {
     return (
@@ -12,6 +13,9 @@ export const Routes = () => {
             <Route path='/playlists'>
                 <Playlists />
             </Route>
-        </Switch>
+            <Route path='/analysis'>
+                <Analysis />
+            </Route>
+        </Switch >
     )
 }

@@ -40,7 +40,7 @@ export const Navbar = () => {
     return (
         <Container>
             <LogoContainer>
-                <Logo img={GitHub} link='https://github.com/DanShadel' />
+                <Logo img={GitHub} link='https://github.com/DanShadel/SPA' />
                 <Logo img={Twitter} link='https://twitter.com/DanShadel' />
             </LogoContainer>
         </Container>
