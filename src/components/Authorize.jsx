@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
-import { getUserAction } from '../actions/userActions';
-
+import QueryString from 'qs';
 
 const Container = styled.div`
     width: 100%;
@@ -33,17 +32,31 @@ const GetStarted = styled.div`
     align-items: center;
 `;
 
-const Authorize = ({ getUserAction }) => {
+const authUser = () => {
+    const authUrl = 'https://accounts.spotify.com/authorize';
+    const spotifyKey = 'cfd2dad3b4654c71a96820ad09b6d61a';
+
+    const queryString = QueryString.stringify({
+        client_id: spotifyKey,
+        response_type: 'token',
+        redirect_uri: 'http://localhost:8080/playlists',
+        scope: 'playlist-read-private',
+    })
+
+    window.location = authUrl + '?' + queryString;
+}
+
+const Authorize = () => {
     return (
         <Container>
             <Title> Log in with Spotify</Title>
-            <GetStarted onClick={() => getUserAction()}>Get Started</GetStarted>
+            <GetStarted onClick={() => authUser()}>Get Started</GetStarted>
         </Container>
     );
 };
 
 const mapDispatchToProps = {
-    getUserAction
+
 }
 
 const mapStateToProps = state => {
