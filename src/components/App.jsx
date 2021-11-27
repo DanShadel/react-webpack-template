@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../main.js';
 import Navbar from './Navbar.jsx';
 import Intro from './Intro.jsx';
+import Authorize from './Authorize.jsx';
 
 const Container = styled.div`
 	width: 100vw;
@@ -16,6 +17,7 @@ const App = () => {
         <Provider store={store}>
             <Container>
                 <Navbar />
+                <Authorize />
             </Container>
         </Provider >
     );
