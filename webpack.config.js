@@ -8,14 +8,15 @@ module.exports = {
     },
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        historyApiFallback: true,
     },
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         chunkFilename: '[id].js',
-        publicPath: ''
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -31,9 +32,13 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/,
-                use: [{loader: 'url-loader',
-                    options: {limit: '10000',
-                        name: 'img/[name].[ext]'}}]
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: '10000',
+                        name: 'img/[name].[ext]'
+                    }
+                }]
             }
         ]
     },

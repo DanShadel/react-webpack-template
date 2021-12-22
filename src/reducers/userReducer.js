@@ -1,10 +1,10 @@
-import { GET_USER } from './../actions/actionTypes';
+import { GET_USER, UPDATE_ACCESS_TOKEN } from '../actions/actionTypes';
 
-const initialState = { id: 'id' }
+const initialState = { accessToken: '' }
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
-        case GET_USER:
-            return { ...state }
+        case UPDATE_ACCESS_TOKEN:
+            return { ...state, accessToken: action.token }
         default:
             return state;
     }

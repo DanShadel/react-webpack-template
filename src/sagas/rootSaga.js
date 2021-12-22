@@ -1,8 +1,9 @@
 import { fork } from 'redux-saga/effects';
-import { watchGetUser } from './sagas.js'
+import { watchGetUserPlaylists, watchGetTrackForPlaylist } from './sagas.js'
 
 function* rootSaga() {
-    yield fork(watchGetUser)
+    yield fork(watchGetUserPlaylists)
+    yield fork(watchGetTrackForPlaylist);
 }
 
 export default rootSaga;

@@ -1,7 +1,11 @@
 import axios from "axios"
 
-export const get = (url) => {
-    return axios.get(url)
+export const get = async (url, headers) => {
+    if (headers) {
+        return axios.get(url, { headers: headers });
+    } else {
+        return axios.get(url);
+    }
 }
 
 export const post = (url, data) => {

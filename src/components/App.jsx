@@ -2,26 +2,27 @@ import React from 'react';
 import styled from 'styled-components'
 import { Provider } from 'react-redux';
 import store from '../main.js';
-import { Navbar } from './Navbar.jsx';
-import { Intro } from './Intro.jsx';
+import Navbar from './Navbar.jsx';
+import { Routes } from './Routes.jsx';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
 	background-color: #191414;
+    display: block;
+    flex-direction: column;
 `;
 
 const App = () => {
-    // React.useEffect((props) => {
-    //     console.log('sup');
-    //     console.log(props);
-    // }, [])
-
     return (
         <Provider store={store}>
-            <Container>
-                <Intro />
-            </Container>
+            <Router>
+                <Container>
+                    <Navbar />
+                    <Routes />
+                </Container>
+            </Router>
         </Provider >
     );
 };
