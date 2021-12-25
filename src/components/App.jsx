@@ -18,9 +18,8 @@ const Content = styled.div`
     width: 100%;
     display: flex;
     height: 90%;
+    margin-bottom: 5%;
 `;
-
-
 
 const App = () => {
     return (
