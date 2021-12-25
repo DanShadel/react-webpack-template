@@ -14,13 +14,23 @@ const Container = styled.div`
     flex-direction: column;
 `;
 
+const Content = styled.div`
+    width: 100%;
+    display: flex;
+    height: 90%;
+`;
+
+
+
 const App = () => {
     return (
         <Provider store={store}>
             <Router>
                 <Container>
                     <Navbar />
-                    <Routes />
+                    <Content>
+                        <Routes/>
+                    </Content> 
                 </Container>
             </Router>
         </Provider >

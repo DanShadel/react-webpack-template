@@ -34,7 +34,7 @@ const GetStarted = styled.div`
 
 const authUser = () => {
     const authUrl = 'https://accounts.spotify.com/authorize';
-    const spotifyKey = 'redacted';
+    const spotifyKey = 'REDACTED';
 
     const queryString = QueryString.stringify({
         client_id: spotifyKey,
