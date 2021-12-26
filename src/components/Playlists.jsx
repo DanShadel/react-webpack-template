@@ -51,7 +51,7 @@ const imgStyles = {
 
 const onClick = (playlist, history, getTracksForPlaylistAction) => {
     getTracksForPlaylistAction(playlist)
-    // history.push('/analysis')
+    history.push('/analysis')
 }
 
 const Playlists = ({ updateAccessTokenAction, user, playlists, getUserPlaylistsAction, getTracksForPlaylistAction }) => {

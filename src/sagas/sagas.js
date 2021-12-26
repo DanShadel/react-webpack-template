@@ -37,3 +37,9 @@ export function* getTracksForPlaylist(action) {
 
   yield put(updateTracksAction(tracks))
 }
+
+
+export function* getGenresForPlaylist(action) {
+
+  const token = yield select(selectToken);
+}

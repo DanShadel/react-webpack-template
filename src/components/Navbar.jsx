@@ -7,7 +7,7 @@ import Twitter from '../assets/Twitter-logo.png';
 
 const Container = styled.div`
     width: 100%;
-    height: 10%;
+    height: 5%;
     background-image: linear-gradient(#828282, #191414);
     display: flex;
     flex-direction: row;
