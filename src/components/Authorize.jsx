@@ -35,7 +35,7 @@ const GetStarted = styled.div`
 const authUser = () => {
     const authUrl = 'https://accounts.spotify.com/authorize';
     const spotifyClientId = 'cfd2dad3b4654c71a96820ad09b6d61a';
-
+    console.log('env:' + process.env.NODE_ENV);
     const queryString = QueryString.stringify({
         client_id: spotifyClientId,
         response_type: 'token',
