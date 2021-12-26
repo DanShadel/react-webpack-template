@@ -34,10 +34,10 @@ const GetStarted = styled.div`
 
 const authUser = () => {
     const authUrl = 'https://accounts.spotify.com/authorize';
-    const spotifyKey = process.env.SPOTIFY_CLIENT_ID;
+    const spotifyClientId = 'cfd2dad3b4654c71a96820ad09b6d61a';
 
     const queryString = QueryString.stringify({
-        client_id: spotifyKey,
+        client_id: spotifyClientId,
         response_type: 'token',
         redirect_uri: 'http://localhost:8080/playlists',
         scope: 'playlist-read-private',

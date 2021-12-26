@@ -48,9 +48,6 @@ module.exports = {
             template: __dirname + '/src/index.html',
             filename: 'index.html',
             inject: 'body'
-        }),
-        new webpack.DefinePlugin({
-            'process.env.SPOTIFY_CLIENT_ID': JSON.stringify(process.env.SPOTIFY_CLIENT_ID)
         })
     ]
 };
