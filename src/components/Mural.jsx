@@ -43,12 +43,10 @@ const Mural = ({ tracks }) => {
         let sqsize = Math.floor(Math.sqrt(tracks.length));
         setSize(sqsize)
         let temp = [];
-        console.log('inEffect tracks:', tracks)
         for (let i = 0; i < sqsize; i++) {
             let slice = tracks.slice(0 + (i * sqsize), sqsize + (i * sqsize));
             temp.push(slice)
         }
-        console.log('temp:' + temp);
         setRows(temp);
 
     }, [tracks])
