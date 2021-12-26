@@ -35,8 +35,9 @@ const GetStarted = styled.div`
 const authUser = () => {
     const authUrl = 'https://accounts.spotify.com/authorize';
     const client_id = 'cfd2dad3b4654c71a96820ad09b6d61a';
-    console.log(process.env.NODE_ENV);
-    const redirect_uri =  process.env.NODE_ENV === 'development' ? 'http://localhost:8080/playlists' : 'https://spotifyplaylistanalyzer.herokuapp.com/playlists' 
+    const redirect_uri =  process.env.NODE_ENV === 'development' ? 
+    'http://localhost:8080/playlists' : 'https://spotifyplaylistanalyzer.herokuapp.com/playlists';
+    
     const queryString = QueryString.stringify({
         client_id,
         response_type: 'token',

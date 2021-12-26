@@ -15,7 +15,6 @@ const MuralRow = styled.div`
     height: ${props => props.height};
     display: flex;
     flex-direction: row;
-
 `;
 
 const MuralItem = styled.div`
