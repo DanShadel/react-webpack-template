@@ -4,41 +4,51 @@ import styled from 'styled-components'
 import Logo from './Logo.jsx';
 import GitHub from '../assets/GitHub-logo.png';
 import Twitter from '../assets/Twitter-logo.png';
+import { useHistory } from 'react-router-dom';
 
 const Container = styled.div`
     width: 100%;
     height: 5%;
-    background-image: linear-gradient(#828282, #191414);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-bottom: 5%;
 `;
 
 const LogoContainer = styled.div`
-	margin: .25em;
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
 `;
 
-const LogIn = styled.div`
-    justify-content: right;
-    background-color: #1DB954;
-    width: 4rem;
-    height: 2rem;
-    color: #ecebe8;
-    border-radius: 20px;
-    margin-right: 4%;
-    margin-top: 5%;
+const Back = styled.div`
     display: flex;
-    justify-content: center;
+    border-bottom: 2px solid #ecebe8;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #ecebe8;
+    transform: rotate(45deg);
+`;
+const BackContainer = styled.div`
+    width: 20%;
+    height: 100%;
+    display: flex;
+    margin-left: 5%;
     align-items: center;
 `;
 
-export const Navbar = () => {
+const onClickBack = (history) => {
+    history.goBack()
+    console.log('onClickBack fn in navbar.jsx')
+};
 
+export const Navbar = () => {
+    const history = useHistory();
     return (
         <Container>
+            <BackContainer onClick={() => onClickBack(history)}>
+                <Back />
+            </BackContainer>
             <LogoContainer>
                 <Logo img={GitHub} link='https://github.com/DanShadel/SPA' />
                 <Logo img={Twitter} link='https://twitter.com/DanShadel' />
@@ -55,4 +65,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
-

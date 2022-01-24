@@ -12,6 +12,8 @@ const Container = styled.div`
 	background-color: #191414;
     display: block;
     flex-direction: column;
+    font-family: Sans-Serif;
+    color: #ecebe8;
 `;
 
 const Content = styled.div`
@@ -28,8 +30,8 @@ const App = () => {
                 <Container>
                     <Navbar />
                     <Content>
-                        <Routes/>
-                    </Content> 
+                        <Routes />
+                    </Content>
                 </Container>
             </Router>
         </Provider >
