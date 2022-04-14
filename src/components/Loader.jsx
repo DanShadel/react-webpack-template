@@ -25,6 +25,7 @@ const Loader = () => {
     return (
         <Container>
             <LoaderWrapper>
+                {/* See react loading icons for more loaders */}
                 <Bars height='48' width='48' color='#ecebe8' />
             </LoaderWrapper>
         </Container>

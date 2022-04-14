@@ -9,11 +9,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
-	background-color: #191414;
     display: block;
     flex-direction: column;
     font-family: Sans-Serif;
-    color: #ecebe8;
 `;
 
 const Content = styled.div`

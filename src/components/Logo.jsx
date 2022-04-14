@@ -16,6 +16,7 @@ const imgStyles = {
     maxHeight: '100%'
 };
 
+// A logo container for images
 const Logo = ({ img, link }) => {
     return (
         <LogoContainer onClick={() => window.open(link, '_blank')}>
