@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
+import yourReducer from "./yourReducer";
 
-// const rootReducer = combineReducers({ reducerKey: reducerImported});
+const rootReducer = combineReducers({ yourReducer: yourReducer });
 
-// initializing an empty reducer as a template
-const rootReducer = combineReducers({});
 export default rootReducer;

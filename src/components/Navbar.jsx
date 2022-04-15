@@ -13,6 +13,7 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 5%;
+    background-color: #AAAAAA
 `;
 
 const LogoContainer = styled.div`
@@ -50,7 +51,7 @@ export const Navbar = () => {
                 <Back />
             </BackContainer>
             <LogoContainer>
-                <Logo img={GitHub} link='https://github.com/DanShadel/SPA' />
+                <Logo img={GitHub} link='https://github.com/DanShadel/' />
                 <Logo img={Twitter} link='https://twitter.com/DanShadel' />
             </LogoContainer>
         </Container>
